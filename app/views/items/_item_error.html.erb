@@ -1,0 +1,5 @@
+<% if @item.errors.any? %>
+  <% @item.errors.messages.each do |msg| %>
+    <p><%= msg %></p>
+  <% end %>
+<% end %>

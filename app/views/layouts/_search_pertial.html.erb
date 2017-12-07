@@ -1,0 +1,19 @@
+<%= form_for(:search, url: search_tmp_path) do |f| %>
+  <div class="row">
+    <div class="col-md-9">
+      <%= f.text_field :key, class: "form-control" %>
+    </div>
+    <div class="col-md-3">
+      <%= f.submit "search", :class =>  "btn btn-primary form-control" %>
+    </div>
+  </div>
+<% end %>
+
+<%
+=begin
+%>
+<%= form_for(:search, url: search_tmp_path) do |f| %>
+<%= form_for(@foo, :url => {:controller => :items, :action => :search_tmp}) do |f| %>
+<%
+=end
+%>

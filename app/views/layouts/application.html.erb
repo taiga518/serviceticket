@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <header class="main">
+      <%= render "layouts/header_dev" %>
+    
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+
+    <div class="header-top">  
+      <%= link_to image_tag("logotmp.png", class:"logo"), items_path %>
+      
+      <div class="pull-right">
+        <%= render "layouts/header_menu"%>
+      </div>
+      
+    </div>
+      
+      <%= yield :content_header%>
+  </header>
+  <body class="main">
+    <div class="container bg-white padding-content" >
+      <%= yield %>
+    </div>
+  </body>
+  </div>
+</html>
+

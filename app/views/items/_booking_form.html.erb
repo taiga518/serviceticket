@@ -1,0 +1,51 @@
+<div class="position-booking">
+  <%= form_for @booking, url: create_booking_path  do |f| %>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>To</h3>
+        <%= f.text_field :to_name, placeholder: "name", class: "form-control" %>
+        <h3>GIFT TYPE</h3>
+        <%= f.select :gift_type, [["1000", 1000], ["2000",2000], ["3000",3000], ["4000",4000], ["5000",5000],], {}, {class:"form-control"} %>
+      </div>
+      <div class="col-md-6">
+        <h3>Message</h3>
+        <%= f.text_area :message, placeholder: "message", class: "form-control" %>
+      </div>
+    </div>
+  
+    <hr>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Delivery method</h3>
+      <%= f.select :delivery_method, 
+      [["email", 1], ["email(later)(preparing)",2], ["actual card(preparing)",3]],
+      {selected: 1, disabled: [2,3] }, {class:"form-control"} %>
+    </div>
+    <div class="col-md-6">
+      <h3>EMAIL TO</h3>
+      <%= f.text_field :to_email, placeholder: "email", class: "form-control" %>
+    </div>
+  </div>  
+    
+    <hr>
+    
+  <div class="row">
+    <div class="col-md-6">
+      <h3>FROM</h3>
+      <%= f.text_field :from_name, placeholder: "name", class: "form-control" %>
+    </div>
+    <div class="col-md-6">
+      <h3>SENDER EMAIL</h3>
+      <%= f.text_field :from_email, placeholder: "email", class: "form-control" %>
+    </div>
+  </div>  
+    
+    <%= f.hidden_field :item_id, :value => @item.id %>
+  
+    <hr>
+  
+    <%= f.submit :class =>  "btn btn-primary position-button" %>
+  <% end %>
+
+</div>

@@ -1,0 +1,11 @@
+<div class="summary">
+      <h2><%= @item.title %></h2>
+      <p><%= (("★"*@item.reputation)+"☆"*5).slice(0..4) || "no reputation" %></p>
+      <p><%= @item.location || "no location" %> | <%= "$"*@item.price || "no price" %></p>
+<div class="container color-item-summary">
+  <div class="position-image">
+      <p><%= image_tag @item.image, :class => "booking_item_img position-item-summary" %></p>
+  </div>
+</div>
+  </div>
+</div>

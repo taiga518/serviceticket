@@ -1,0 +1,158 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.header-top{
+  background-color: #FFFFFF;
+
+  .logo {
+    width: auto;
+    height: 50px;
+}
+  
+}
+
+.container{
+  padding: 0px;
+}
+
+.container-main .margin-tmp{ 
+  margin :15px;
+}
+
+.padding-content .padding-tmp{
+  padding: 15px;
+}
+
+.padding-items{
+  padding: 0px;
+  margin: 0px;
+}
+
+.item-table{
+  width: 100%;
+  .item{
+    height: 100px;
+    width: auto;
+  }
+}
+
+.item-table-image-field{
+  width: 300px;
+  height: auto;
+}
+
+p{
+  word-break: break-all;
+}
+
+.thumnail-item {
+  width: 70px;
+  height: 70px;
+  object-fit: cover; 
+}
+
+.pattern5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  border: 1px solid red;
+}
+
+
+.main {
+  background-color: #EEEEEE
+}
+
+.summary{
+  background-color: #696969;
+  overflow: hidden;
+}
+
+p{
+  margin: 0px;
+}
+
+img.booking_item_img{
+  width:400px;
+  height:300px;
+  object-fit: cover;
+}
+
+.color-item-summary{
+  background-color: #1f1f1f;
+}
+
+
+.position-item-summary{
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.position-image{
+  margin: 3% auto 3%;
+}
+
+
+.summary{
+  h2{
+  color: #FFFFFF;
+  }
+  p{
+    color: #C0C0C0;
+  }
+}
+
+div.gift-form{
+  .position-booking{
+    padding: 0 8% 0;
+  }
+  #booking_message{
+    height: 125px;
+  }
+}
+
+.position-item-create{
+    padding: 0 8% 0;
+  textarea{
+    height: 150px;
+  }
+  
+}
+
+.position-button{
+  float: right;
+}
+
+.header-search{
+  height:350px;
+  padding: 5%;
+    /* 画像ファイルの指定 */
+  background-image: url("searchback2.jpg");
+   
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center;
+   
+  /* 画像をタイル状に繰り返し表示しない */
+  background-repeat: no-repeat;
+   
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+   
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+   
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #464646;
+
+  .header-search-text{
+    color: #FFFFFF;
+  }
+}
+
+.bg-white{
+ background:#ffffff !important;
+}

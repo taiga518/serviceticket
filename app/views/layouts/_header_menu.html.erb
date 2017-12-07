@@ -1,0 +1,10 @@
+<% if logged_in? %>
+  <p style="display:inline;"><%= link_to "management", management_path %>|</p>
+  <p style="display:inline;"><%= link_to "logout", logout_path, method: :delete %>|</p>
+<% else %>
+  <p><%= link_to "login", login_path %>|</p>
+<% end %>
+
+<% if logged_in? %>
+<%= link_to "create new item", new_item_path %>
+<% end %>

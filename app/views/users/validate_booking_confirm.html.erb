@@ -1,0 +1,26 @@
+<p>Booking detail</p>
+<ul>
+  <li><%= @booking.to_name %></li>
+  <li><%= @booking.gift_type %></li>
+  <li><%= @booking.message %></li>
+  <li><%= @booking.delivery_method %></li>
+  <li><%= @booking.to_email %></li>
+  <li><%= @booking.from_name %></li>
+  <li><%= @booking.from_email %></li>
+  <li><%= @booking.serial %></li>
+</ul>
+
+<h3>are you sure to validate?</h3>
+<%= form_for(:booking_validation, url: validate_booking_path, method: :post) do |f| %>
+  <h3>serial</h3>
+  <%= f.text_field :serial, class: "form-control" %>
+  <h3>password</h3>
+  <%= f.password_field :password, class: "form-control" %>
+  <br/>
+  
+  <%= f.hidden_field :booking_id, :value => @booking.id %>
+
+  
+  <%= f.submit "validate", :class =>  "btn btn-primary form-control" %>
+<% end %>
+<%= link_to "go index", items_path%>

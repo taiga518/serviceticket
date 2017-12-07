@@ -1,0 +1,12 @@
+<p>Booking detail</p>
+<ul>
+  <li><%= @booking.to_name %></li>
+  <li><%= @booking.gift_type %></li>
+  <li><%= @booking.message %></li>
+  <li><%= @booking.delivery_method %></li>
+  <li><%= @booking.to_email %></li>
+  <li><%= @booking.from_name %></li>
+  <li><%= @booking.from_email %></li>
+</ul>
+
+<%= link_to "go index", items_path%>

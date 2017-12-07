@@ -1,0 +1,15 @@
+<% if logged_in? %>
+  <p><%= link_to "profile", user_path(current_user) %></p>
+  <p><%= link_to "logout", logout_path, method: :delete %></p>
+<% else %>
+  <p><%= link_to "login", login_path %></p>
+<% end %>
+
+<% if logged_in? %>
+<%= link_to "create new item", new_item_path %>
+<% end %>
+
+      <%= link_to "user", users_path %>
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
