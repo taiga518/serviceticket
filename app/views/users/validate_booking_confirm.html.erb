@@ -1,4 +1,4 @@
-<p>Booking detail</p>
+<p>ギフトの詳細</p>
 <ul>
   <li><%= @booking.to_name %></li>
   <li><%= @booking.gift_type %></li>
@@ -10,17 +10,17 @@
   <li><%= @booking.serial %></li>
 </ul>
 
-<h3>are you sure to validate?</h3>
+<h3>このギフトを使用済みにしてよろしいですか</h3>
 <%= form_for(:booking_validation, url: validate_booking_path, method: :post) do |f| %>
-  <h3>serial</h3>
+  <h3>ギフトのシリアル番号</h3>
   <%= f.text_field :serial, class: "form-control" %>
-  <h3>password</h3>
+  <h3>あなたのパスワード</h3>
   <%= f.password_field :password, class: "form-control" %>
   <br/>
   
   <%= f.hidden_field :booking_id, :value => @booking.id %>
 
   
-  <%= f.submit "validate", :class =>  "btn btn-primary form-control" %>
+  <%= f.submit "使用", :class =>  "btn btn-primary form-control" %>
 <% end %>
-<%= link_to "go index", items_path%>
+<%= link_to "ホームへ戻る", items_path%>

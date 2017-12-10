@@ -7,11 +7,12 @@ Rails.application.routes.draw do
   delete "/logout", to: 'sessions#destroy'
   post "/items/booking/:id(.:format)", to: 'bookings#create', as: "create_booking"
   get "/booking/detail/:id", to: "bookings#show", as: "booking"
-  post "/items/search_tmp", to: "items#search_tmp", as:"search_tmp"
+  post "/items/search/search_tmp", to: "items#search_tmp", as:"search_tmp"
   get "/items/search/:key", to: "items#search", as:"search"
   get "user/management", to:"users#management", as:"management"
   post "user/management/confirm", to:"bookings#validate_booking_confirm", as:"validate_booking_confirm"
   post "user/management/confirm/check", to:"bookings#validate_booking", as:"validate_booking"
+  root :to => 'top#landing'
 
   resources :users
   resources :items do

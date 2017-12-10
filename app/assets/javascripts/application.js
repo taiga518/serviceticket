@@ -1,3 +1,5 @@
+//it used be written with "="
+// require turbolinks
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -11,7 +13,7 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
+
 //= require_tree .
 
 //= require jquery

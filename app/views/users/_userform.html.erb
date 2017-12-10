@@ -1,6 +1,16 @@
+<div class="user-form">
 <%= form_for @user do |f| %>
-  <%= f.text_field :name, placeholder: "name" %>
-  <%= f.text_field :password, placeholder: "password" %>
-  <%= f.text_field :password_confirmation, placeholder: "password confirmation" %>
-  <%= f.submit %>
+  <h3>ログインID</h3>
+  <%= f.text_field :name,  class: "form-control" %>
+  <h3>メールアドレス</h3>
+  <%= f.email_field :email, class: "form-control" %>
+  <h3>電話番号</h3>
+  <%= f.text_field :number, class: "form-control"%>
+  <h3>パスワード</h3>
+  <%= f.password_field :password, class: "form-control" %>
+  <h3>パスワード確認</h3>
+  <%= f.password_field :password_confirmation, class: "form-control" %>
+
+  <%= f.submit :class =>  "btn btn-primary position-button" %>
 <% end %>
+</div>

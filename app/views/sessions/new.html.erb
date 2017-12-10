@@ -1,13 +1,16 @@
 <h1>log in</h1>
-
+<div class="padding-form">
 <%= form_for(:session, url: login_path) do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name , class: "form-control"%>
 
   <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.password_field :password , class: "form-control"%>
   
-  <%= f.submit "Log in", class: "btn btn-primary" %>
+  <br/>
+  
+  <%= f.submit "ログイン", class: "btn btn-primary" %>
 <% end %>
+</div>
 
-<p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+<%= link_to "新規登録", new_user_path %>

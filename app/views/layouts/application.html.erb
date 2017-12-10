@@ -7,19 +7,20 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <header class="main">
-      <%= render "layouts/header_dev" %>
-    
-    <% flash.each do |message_type, message| %>
-      <div class="alert alert-<%= message_type %>"><%= message %></div>
-    <% end %>
 
     <div class="header-top">  
-      <%= link_to image_tag("logotmp.png", class:"logo"), items_path %>
+
+      <%= link_to image_tag("logo.jpg", class:"logo"), items_path %>
       
       <div class="pull-right">
         <%= render "layouts/header_menu"%>
       </div>
-      
+
+    <!-- flash -->      
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+
     </div>
       
       <%= yield :content_header%>
@@ -28,6 +29,9 @@
     <div class="container bg-white padding-content" >
       <%= yield %>
     </div>
+  <% if !(logged_in?) %>  
+    <%= link_to "*店主様　お店を登録しませんか", new_user_path %>
+  <% end %>
   </body>
   </div>
 </html>

@@ -3,15 +3,15 @@
 
 <% item = Item.find_by(user_id: current_user.id) %>
 <% if item %>
-  <h3>Name: <%= item.title %></h3>
+  <h3>店名: <%= item.title %></h3>
   <% bookings = Booking.where(item_id: item.id) %>
   <% if bookings %>
       <table class="table table-striped">
         <tr>
-          <th>id</th>
-          <th>Name</th>
-          <th>gift type</th>
-          <th>validation</th>
+          <th>ID</th>
+          <th>送り主</th>
+          <th>ギフトの種類</th>
+          <th>使用状況</th>
         </tr>
     <% bookings.each do |booking| %>
         <tr>
@@ -19,15 +19,15 @@
           <td><%= booking.to_name %></td>
           <td><%= booking.gift_type %></td>
           <% if booking.validation == false %>
-            <td><%= button_to 'validate', {:controller => "bookings", :action => "validate_booking_confirm", :booking_id => booking.id}, method: :post, :class =>  "btn btn-primary" %></td>
+            <td><%= button_to '使用', {:controller => "bookings", :action => "validate_booking_confirm", :booking_id => booking.id}, method: :post, :class =>  "btn btn-primary" %></td>
           <% else %>
-            <td>validated</td>
+            <td>使用済み</td>
           <% end %>
         </tr>
     <% end %>
       </table>
   <% else %>
-  <p>no bookings</p>
+  <p>ギフトはまだ発行されていません</p>
   <% end %>
 <% end %>
 

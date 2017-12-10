@@ -2,7 +2,7 @@
   <table border="1" class="item-table">
   <% if (items.length==0) then %>  
    <tr><td>
-    <h3> no match </h3>
+    <h3>一致なし</h3>
    </tr></td>
   <% else %>
     <% items.each do |item| %>
@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-5">
             <%= link_to item.title, item_path(item.id) %>
-            <p><%= (("★"*(item.reputation || 0))+"☆"*5).slice(0..4) || "no reputation" %></p>
+            <p><%= (("★"*(item.reputation || 0))+"☆"*5).slice(0..4) || "評価なし"%></p>
             <br>
             <p><%= "$"*(item.price || 1) %></p>
             <br>

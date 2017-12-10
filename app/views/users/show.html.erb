@@ -1,1 +1,5 @@
-<h1>this is a page of <%= @user.name %></h1>
+<h1> <%= @user.name %>さん　service ticketへようこそ</h1>
+<h3>利用ガイド</h3>
+<%= render "guide" %>
+
+  <%= button_to 'ホームに戻る', items_path, method: :get, :class => "btn btn-info message" %>

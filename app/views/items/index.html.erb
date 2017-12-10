@@ -1,10 +1,5 @@
 <% content_for :content_header do %>
-<div class="header-search">
-  <h1 class="header-search-text">reccoment your favorite restaurants</h1>
-  <br/><br/>
-  <%= render "layouts/search_pertial"%>
-</div>
+  <%= render "header_search"%>
 <% end %>
-
 
 <%= render :partial => "items_index", :locals => {items: @items} %>

@@ -2,14 +2,14 @@
   <%= form_for @booking, url: create_booking_path  do |f| %>
     <div class="row">
       <div class="col-md-6">
-        <h3>To</h3>
-        <%= f.text_field :to_name, placeholder: "name", class: "form-control" %>
-        <h3>GIFT TYPE</h3>
+        <h3>相手のお名前</h3>
+        <%= f.text_field :to_name, class: "form-control" %>
+        <h3>ギフトの種類</h3>
         <%= f.select :gift_type, [["1000", 1000], ["2000",2000], ["3000",3000], ["4000",4000], ["5000",5000],], {}, {class:"form-control"} %>
       </div>
       <div class="col-md-6">
-        <h3>Message</h3>
-        <%= f.text_area :message, placeholder: "message", class: "form-control" %>
+        <h3>ひと言メッセージ</h3>
+        <%= f.text_area :message, placeholder: "例）いつもありがとう！この店のパスタは最高だよ！", class: "form-control" %>
       </div>
     </div>
   
@@ -17,14 +17,14 @@
   
   <div class="row">
     <div class="col-md-6">
-      <h3>Delivery method</h3>
+      <h3>お届け方法</h3>
       <%= f.select :delivery_method, 
-      [["email", 1], ["email(later)(preparing)",2], ["actual card(preparing)",3]],
+      [["メール", 1], ["メール(後日)(準備中)",2], ["カードの郵便(準備中)",3]],
       {selected: 1, disabled: [2,3] }, {class:"form-control"} %>
     </div>
     <div class="col-md-6">
-      <h3>EMAIL TO</h3>
-      <%= f.text_field :to_email, placeholder: "email", class: "form-control" %>
+      <h3>お相手のメールアドレス</h3>
+      <%= f.email_field :to_email, class: "form-control" %>
     </div>
   </div>  
     
@@ -32,12 +32,12 @@
     
   <div class="row">
     <div class="col-md-6">
-      <h3>FROM</h3>
-      <%= f.text_field :from_name, placeholder: "name", class: "form-control" %>
+      <h3>差出人のお名前</h3>
+      <%= f.text_field :from_name, class: "form-control" %>
     </div>
     <div class="col-md-6">
-      <h3>SENDER EMAIL</h3>
-      <%= f.text_field :from_email, placeholder: "email", class: "form-control" %>
+      <h3>差出人のメールアドレス</h3>
+      <%= f.email_field :from_email, class: "form-control" %>
     </div>
   </div>  
     
@@ -45,7 +45,7 @@
   
     <hr>
   
-    <%= f.submit :class =>  "btn btn-primary position-button" %>
+    <%= f.submit "ギフトを作成！" , :class =>  "btn btn-primary position-button" %>
   <% end %>
 
 </div>
