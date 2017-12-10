@@ -27,7 +27,9 @@
 5.times do |index|
   User.create(
     name: "user#{index+1}",
-    password: "user#{index+1}",
+    email: "email#{index+1}@email#{index+1}.com",
+    number: "#{index+1}*10",
+    password: "user#{index+1}"
   )
 end
 
@@ -36,7 +38,7 @@ body_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non p
 5.times do |index|
   Item.create(
     title: "restaurant_#{index+1}",
-    body: body_0text,
+    body: "body_0text",
     price: "#{index+1}",
     reputation: "#{index+1}",
     location: "london-#{index+1}",
