@@ -19,7 +19,6 @@
             <p><%= "$"*(item.price || 1) %></p>
             <br>
             <p><%= item.location %></p>
-            <%= link_to "[x]", item_path(item.id), mathod: :delete %>
             </div>
             <div class="col-md-6">
               <%= item.body %>
