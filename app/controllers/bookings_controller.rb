@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.serial = SecureRandom.hex(5)
     if @booking.save
+      GiftMailer.send_gift(@booking).deliver
       redirect_to booking_path(@booking.id)
     else
       render "new"

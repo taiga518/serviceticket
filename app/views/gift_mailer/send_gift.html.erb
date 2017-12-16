@@ -1,0 +1,17 @@
+<p>発行ギフトの詳細</p>
+<ul class="booking-detail">
+  <h3>相手のお名前</h3>
+  <li><%= @booking.to_name %></li>
+  <h3>ギフトの種類</h3>
+  <li><%= @booking.gift_type %></li>
+  <h3>ひと言メッセージ</h3>
+  <li><%= @booking.message %></li>
+  <h3>お届け方法</h3>
+  <li><%= @booking.delivery_method %></li>
+  <h3>お相手のメールアドレス</h3>
+  <li><%= @booking.to_email %></li>
+  <h3>差出人のお名前</h3>
+  <li><%= @booking.from_name %></li>
+  <h3>差出人のメールアドレス</h3>
+  <li><%= @booking.from_email %></li>
+</ul>

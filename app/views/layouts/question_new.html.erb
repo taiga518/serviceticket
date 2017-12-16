@@ -1,0 +1,26 @@
+<div class="question-form">
+<p>こちらは簡易問い合わせ画面です。現在問い合わせ画面を作成中です。</p>
+
+<p>連絡先は　taiga518(アット)gmail.com　です</p>
+<p>*(アット)を@に変更してご連絡ください</p>
+<p>または、 Line:  http://line.me/ti/p/I3YKeL7Rtv <br />
+FB:  http://facebook.com/taiga518<br />
+Twitter(peing):https://peing.net/taiga518_biz
+</p>
+</div>
+<%
+=begin
+%>
+<%= form_for(:question, url: question_create) do |f| %>
+  <div class="row">
+      <label>メールアドレス</label>
+      <%= f.email_field :address, class: "form-control"%>
+      <label>本文</label>
+      <%= f.text_area :body, class: "form-control" %>
+      <%= f.submit "送信", :class =>  "btn btn-primary form-control" %>
+  </div>
+<% end %>
+
+<%
+=end
+%>

@@ -63,7 +63,7 @@ p{
 
 
 .main {
-  background-color: #EEEEEE
+  background-color: #EEEEEE;
 }
 
 .summary{
@@ -159,3 +159,58 @@ img.booking_item_img{
     padding: 2% 8% 2%;
 }
 
+.landing_process, .landing_function {
+  padding: 2% 8% 2%;
+  text-align:center; 
+  div.row{
+    text-align:center; 
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.landing_link{
+  padding: 8%;
+  background-color: #FFFFFF;
+  text-align:center; 
+
+  h1, form{
+    display: inline-block;
+  }  
+}
+
+.landing_persona{
+    padding: 2% 5% 2%;
+    img{
+      height: 300px;
+    }
+}
+
+.landing_merit{
+  padding: 2%;
+  text-align: center;
+  ul{
+    list-style:none;
+  }
+  p{
+    padding: 30px;
+/*    display: inline-block; */
+  }
+  img{
+    height: 60px;
+    padding: 0px 10px 0px;
+  }
+  .landing_merit_owner{
+    display: none;
+  }
+}
+
+.tmp-notification{
+  background-color: #FFCC00;
+  overflow: hidden;
+  margin: 0;
+}
+
+.question_form{
+}

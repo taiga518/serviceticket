@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   post "user/management/confirm", to:"bookings#validate_booking_confirm", as:"validate_booking_confirm"
   post "user/management/confirm/check", to:"bookings#validate_booking", as:"validate_booking"
   root :to => 'top#landing'
+  get "/question", to:"application#question_new", as:"question_new"
+  post "/question", to:"application#question_create", as:"question_create"
 
   resources :users
   resources :items do

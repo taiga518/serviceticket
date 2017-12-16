@@ -1,6 +1,6 @@
 <% content_for :content_header do %>
   <div class="landing1">
-    <%= image_tag "landingtop.jpg" %>
+    <%= image_tag "landing/top/img_present.jpg" %>
     <div class="message-box">
     <p class="message">あなたの好きなレストランをプレゼントしよう</p>
     <br/>
@@ -8,5 +8,217 @@
     </div>
   </div>
   
+  <div class="landing_function">
+      <h1 style="display:inline">service ticketでできること</h1>
+    <p align="right">*もっと詳しい機能は<%= link_to "こちら", url:"#" %></p>
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "landing/function/gift.png" %>
+        <p>あなたの好きなレストランへの招待券をプレゼントすることができます。あなたのセンス光る特別なプレゼントです。</p>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag "landing/function/request.png" %>
+        <p>招待されたいレストランをリクエストすることができます。自分では普段行けないお店もお願いできちゃうかも</p>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag "landing/function/online.png" %>
+        <p>招待券の購入、配達、利用はすべてオンラインで手軽に行えます。お互いの住所を公開する必要もありません！お会計もお財布いらず</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="landing_process">
+    <h1 style="display:inline">service ticketの使い方</h1>
+    <p align="right">*もっと詳しい仕組みは<%= link_to "こちら", url:"#" %></p>
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "landing/process/search.png" %>
+        <h4>1. プレゼントしたいレストランを選ぶ</h4>
+        <p>あなたのお気に入りのレストランをプレゼントして、友達にも楽しんでもらいましょう。プレゼントしたい値段は選ぶことができます。</p>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag "landing/process/send.png" %>
+        <h4>2. メッセージと一緒に送る</h4>
+        <p>メール、Facebook、twitter、LINEでメッセージと一緒に招待状を送ろう！</p>
+      </div>
+      <div class="col-md-4">
+        <%= image_tag "landing/process/eat.png" %>
+        <h4>3. 友達のおすすめをタダで楽しむ！</h4>
+        <p>もらった招待状を提示して、友達おすすめのレストランでタダでご飯を食べよう！</p>
+      </div>
+    </div>
+  </div>
+
+<!--ペルソナ-->
+<!--一段目-->
+  <div class="landing_persona">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-3">
+        <%= image_tag "landing/persona/giver1.png" %>
+          </div>
+          <div class="col-md-9">
+            <h3>[送る]後輩に焼肉のプレゼントを</h3>
+            <p>
+              24歳　男性<br />
+              サラリーマン<br />
+              <br />
+              学生時代は体育会系に所属して後輩によくご飯を奢っていたけど、
+              最近はなにもしてやれていないな。
+              そういえばあいつら、週末の試合頑張ったみたいだし
+              Service ticketでお気に入りの焼肉おごってやるか
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-3">
+        <%= image_tag "landing/persona/giver2.png" %>
+          </div>
+          <div class="col-md-9">  
+          <h3>[送る]お隣にケーキでいつものお礼を</h3>
+          <p>
+            35歳　女性<br />
+            主婦<br />
+            <br />
+            お隣さんにはいつもお世話になっているからお返しがしたいわ。
+            ケーキが好きって言っていたし、service ticketで新しくできたケーキ屋さんの商品券を送ろうかしら
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- 二段目 -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-3">
+        <%= image_tag "landing/persona/receiver.png" %>
+          </div>
+          <div class="col-md-9">
+            <h3>[もらう]ラーメン屋のプレゼントを友達にリクエスト</h3>
+            <p>
+              23歳　男性<br />
+              大学院生<br />
+              <br />
+              誕生日プレゼントはせっかくなら欲しいものをもらいたいな。
+              小説とリュックと、行きたかったラーメン屋のservice ticketを
+              ウィッシュリストでFacebookに公開しておこう
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-3">
+        <%= image_tag "landing/persona/owner.png" %>
+          </div>
+          <div class="col-md-9">
+          <h3>[参加する]ファンの広報活動を支援、新規優良顧客獲得</h3>
+          <p>
+            40歳　男性<br />
+            シェフ <br />
+            <br />
+            リピートしてくれるお客さんはいるんだけど、どうも新規獲得が弱いな。
+            クーポンを出しても一度限りのお客が多いし、
+            ファンになってリピートしてくれるお客さんが増えたらうれしいのに。
+            Service ticket ならお客さん同士の招待だから好みを踏まえたいい宣伝かも
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- merit -->
+  <div class="landing_merit">
+    <h2>こんなに便利！</h2>
+    <div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-default active"><input type="radio" name="landing_merit_options" id="option_giver_receiver" autocomplete="off" value=0 checked="checked">送る人、もらう人</label>
+    <label class="btn btn-default"> <input type="radio" name="landing_merit_options" id="option_owner" autocomplete="off" value=1>お店の人</label>
+    </div>
+
+<!-- 送る人、もらう人 --->
+    <div class="landing_merit_giver_receiver">
+      <h3>～送る人、もらう人～</h3>
+      <ul>
+        <li>
+          <p>アプリで簡単操作。すぐにプレゼントできます！
+          <%= image_tag "landing/merit/phone.png" %></p>
+        </li>
+        <li>
+          <p>距離や忙しさから会えない場合も気持ちを伝えられます！
+          <%= image_tag "landing/merit/hart.png" %></p>
+        </li>
+        <li>
+          <p>住所を知らせなくても利用できます！
+          <%= image_tag "landing/merit/lock.png" %></p>
+        </li>
+        <li>
+          <p>好きなレストランをプレゼントする唯一の方法！
+          <%= image_tag "landing/merit/present.png" %></p>
+        </li>
+        <li>
+          <p>プレゼントだけでなく、気になるレストランをリクエストできます！
+          <%= image_tag "landing/merit/list.png" %></p>
+        </li>
+        <li>
+          <p>会員登録、利用、すべて手数料ゼロ！
+          <%= image_tag "landing/merit/ok.png" %></p>
+        </li>
+      </ul>
+    </div>
+  
+<!-- お店 -->
+    <div class="landing_merit_owner">
+      <h3>～参加するお店～</h3>
+      <ul>
+        <li>
+          <p>ギフト券発行によりお店のファンの広報活動を支援できます！
+          <%= image_tag "landing/merit/speak.png" %></p>
+        </li>
+        <li>
+          <p>利用者情報を蓄積してファンに恩返しもできます！
+          <%= image_tag "landing/merit/database.png" %></p>
+        </li>
+        <li>
+          <p>顧客同士の招待なのでお店の雰囲気にあった新規顧客を獲得できます！
+          <%= image_tag "landing/merit/shakehands.png" %></p>
+        </li>
+        <li>
+          <p>複数人来店&併売も見込めます！
+          <%= image_tag "landing/merit/network.png" %></p>
+        </li>
+        <li>
+          <p>掲載無料、取引手数料有なのでお店の成長がサービスの成長に。<br />損させません！
+          <%= image_tag "landing/merit/graph.png" %></p>
+        </li>
+      </ul>
+    </div>
+  </div> 
+
+  <div class="landing_link">
+    <h1 style="display:inline">さっそく</h1>
+    <%= button_to 'ギフトを選ぶ', items_path, method: :get, :class => "btn btn-info message" %>
+  </div>
+
+
+
+
+<!--なんでassets/jsだと動かないんだ-->
+<script>
+$('input[name="landing_merit_options"]').change( function(){
+    if ($('input[name="landing_merit_options"]:checked').val() == 0) {
+      $(".landing_merit_giver_receiver").show();
+      $(".landing_merit_owner").hide();
+    }else if($('input[name="landing_merit_options"]:checked').val() == 1){
+      $(".landing_merit_giver_receiver").hide();
+      $(".landing_merit_owner").show();
+    }
+});
+</script>
+
 <% end %>
 

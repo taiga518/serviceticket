@@ -8,10 +8,11 @@
   </head>
   <header class="main">
 
-    <div class="header-top">  
+    <%= render "layouts/tmp_notification" %>
 
-      <%= link_to image_tag("logo.jpg", class:"logo"), items_path %>
-      
+
+    <div class="header-top">  
+      <%= link_to image_tag("logo.jpg", class:"logo"), root_path %>
       <div class="pull-right">
         <%= render "layouts/header_menu"%>
       </div>
