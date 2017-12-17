@@ -30,10 +30,16 @@
 
 .item-table{
   width: 100%;
-  .item{
+  & .item{
     height: 100px;
     width: auto;
+    & .btn{
+      margin: 10%;
+      width: 100%;
+      font-size: small;
+    }
   }
+  
 }
 
 .item-table-image-field{
@@ -46,8 +52,8 @@ p{
 }
 
 .thumnail-item {
-  width: 70px;
-  height: 70px;
+  width: 150px;
+  height: 150px;
   object-fit: cover; 
 }
 
@@ -131,16 +137,17 @@ img.booking_item_img{
  background:#ffffff !important;
 }
 
-
-.landing1, .item-search {
-  position: relative;
+.item-search{
   margin: 0;
   padding: 0;
-
+  img.background {
+    position: relative;
+    width: 100%;
+  }
   .message-box{
-      position: absolute;
-      top: 40%;
-      left: 50%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
     .message{
       -ms-transform: translate(-50%,-50%);
       -webkit-transform: translate(-50%,-50%);
@@ -148,10 +155,38 @@ img.booking_item_img{
       color: white;
       font-size: 200%;
     }
+    img.message{
+      height: 100%;
+    }
   }
-  img {
+}
+
+img.background{
+  width: 100%;
+}
+
+.background, .item-search{
+  position: relative;
+  & img{
     width: 100%;
-    
+  }
+  & .message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    text-align:center; 
+    width: 100%;
+    color: white;
+    font-size: 200%;
+  }
+  & form{
+    display: inline-block;
+  }
+  & .search-form{
+      width: 80%;      
   }
 }
 
@@ -212,5 +247,32 @@ img.booking_item_img{
   margin: 0;
 }
 
-.question_form{
+.question-form{
+    padding: 2%;
+  text-align: center;
+
+  background-color: #EEEEEE;
+}
+
+
+.sample{
+  background-color:#EEEEEE;
+  & img{
+     height: 350px;
+  }
+  
+}
+
+.show-booking{
+  padding: 2% 8% 2%;
+  text-align: center;
+  & img{
+    padding: 5%;
+  }
+  & ul{
+    list-style:none;
+  }
+  & .sample-booking{
+    width: 100%;
+  }
 }

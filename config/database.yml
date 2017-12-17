@@ -4,6 +4,7 @@ default: &default
   pool: 5
   username: ubuntu
   password: taiga518
+  template: template0 #なんでうまくいくのか知らん
 
 development:
   <<: *default

@@ -7,6 +7,9 @@ class ApplicationController < ActionController::Base
     render "layouts/question_new"
   end
 
+  def show_usage
+    render "layouts/show_usage"
+  end
 
 
 end

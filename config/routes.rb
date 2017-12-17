@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   root :to => 'top#landing'
   get "/question", to:"application#question_new", as:"question_new"
   post "/question", to:"application#question_create", as:"question_create"
+  get "/usage", to:"application#show_usage", as:"show_usage"
 
   resources :users
   resources :items do

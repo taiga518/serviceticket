@@ -11,10 +11,11 @@
       <tr><td>
         <div class="item">
           <div class="row">
-            <div class="col-md-1 ">
+            <div class="col-md-2 ">
               <%= link_to image_tag((item.image), class:"thumnail-item"), item_path(item.id) %>
+                <%= button_to 'check', item_path(item.id), method: :get, :class => "btn btn-info" %>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-4">
             <%= link_to item.title, item_path(item.id) %>
             <p><%= (("★"*(item.reputation || 0))+"☆"*5).slice(0..4) || "評価なし"%></p>
             <br>

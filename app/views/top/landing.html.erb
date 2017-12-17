@@ -1,27 +1,32 @@
 <% content_for :content_header do %>
-  <div class="landing1">
+
+  <div class="background">
     <%= image_tag "landing/top/img_present.jpg" %>
-    <div class="message-box">
-    <p class="message">あなたの好きなレストランをプレゼントしよう</p>
+    <div class="message">
+    <p>あなたの好きなレストランをプレゼントしよう</p>
     <br/>
-    <%= button_to 'ギフトを選ぶ', items_path, method: :get, :class => "btn btn-info message" %>
-    </div>
+    <%= button_to 'ギフトを選ぶ', items_path, method: :get, :class => "btn btn-info" %>
+    <%= button_to 'サンプルを見る', show_usage_path, method: :get, :class => "btn btn-default" %>
+  </div>
   </div>
   
   <div class="landing_function">
       <h1 style="display:inline">service ticketでできること</h1>
-    <p align="right">*もっと詳しい機能は<%= link_to "こちら", url:"#" %></p>
+<!--    <p align="right">*もっと詳しい機能は<%= link_to "こちら", url:"#" %></p> -->
     <div class="row">
       <div class="col-md-4">
         <%= image_tag "landing/function/gift.png" %>
+        <h4>全く新しくて特別なプレゼント</h4>
         <p>あなたの好きなレストランへの招待券をプレゼントすることができます。あなたのセンス光る特別なプレゼントです。</p>
       </div>
       <div class="col-md-4">
         <%= image_tag "landing/function/request.png" %>
+        <h4>憧れのお店をおねだり</h4>
         <p>招待されたいレストランをリクエストすることができます。自分では普段行けないお店もお願いできちゃうかも</p>
       </div>
       <div class="col-md-4">
         <%= image_tag "landing/function/online.png" %>
+        <h4>手軽で簡単プレゼント・利用</h4>
         <p>招待券の購入、配達、利用はすべてオンラインで手軽に行えます。お互いの住所を公開する必要もありません！お会計もお財布いらず</p>
       </div>
     </div>
@@ -29,7 +34,7 @@
   
   <div class="landing_process">
     <h1 style="display:inline">service ticketの使い方</h1>
-    <p align="right">*もっと詳しい仕組みは<%= link_to "こちら", url:"#" %></p>
+<!--    <p align="right">*もっと詳しい仕組みは<%= link_to "こちら", url:"#" %></p>-->
     <div class="row">
       <div class="col-md-4">
         <%= image_tag "landing/process/search.png" %>
@@ -48,6 +53,9 @@
       </div>
     </div>
   </div>
+
+
+
 
 <!--ペルソナ-->
 <!--一段目-->
@@ -144,6 +152,8 @@
     <div class="landing_merit_giver_receiver">
       <h3>～送る人、もらう人～</h3>
       <ul>
+        <div class="row">
+        <div class="col-md-6">
         <li>
           <p>アプリで簡単操作。すぐにプレゼントできます！
           <%= image_tag "landing/merit/phone.png" %></p>
@@ -156,6 +166,8 @@
           <p>住所を知らせなくても利用できます！
           <%= image_tag "landing/merit/lock.png" %></p>
         </li>
+        </div>
+        <div class="col-md-6"> 
         <li>
           <p>好きなレストランをプレゼントする唯一の方法！
           <%= image_tag "landing/merit/present.png" %></p>
@@ -168,6 +180,8 @@
           <p>会員登録、利用、すべて手数料ゼロ！
           <%= image_tag "landing/merit/ok.png" %></p>
         </li>
+        </div>
+        </div>
       </ul>
     </div>
   
@@ -175,6 +189,8 @@
     <div class="landing_merit_owner">
       <h3>～参加するお店～</h3>
       <ul>
+        <div class="row">
+          <div class="col-md-6">
         <li>
           <p>ギフト券発行によりお店のファンの広報活動を支援できます！
           <%= image_tag "landing/merit/speak.png" %></p>
@@ -187,6 +203,8 @@
           <p>顧客同士の招待なのでお店の雰囲気にあった新規顧客を獲得できます！
           <%= image_tag "landing/merit/shakehands.png" %></p>
         </li>
+        </div>
+        <div class="col-md-6">
         <li>
           <p>複数人来店&併売も見込めます！
           <%= image_tag "landing/merit/network.png" %></p>
@@ -195,19 +213,25 @@
           <p>掲載無料、取引手数料有なのでお店の成長がサービスの成長に。<br />損させません！
           <%= image_tag "landing/merit/graph.png" %></p>
         </li>
+        </div>
+        </div>
       </ul>
     </div>
   </div> 
 
-  <div class="landing_link">
-    <h1 style="display:inline">さっそく</h1>
-    <%= button_to 'ギフトを選ぶ', items_path, method: :get, :class => "btn btn-info message" %>
+  <div class="background">
+    <%= image_tag "landing/bottom/landing_bottom.jpg" %>
+    <div class="message">
+    <p>あなたの好きなレストランをプレゼントしよう</p>
+    <br/>
+    <%= button_to 'ギフトを選ぶ', items_path, method: :get, :class => "btn btn-info" %>
+    <%= button_to 'サンプルを見る', show_usage_path, method: :get, :class => "btn btn-default" %>
   </div>
+</div>
 
 
 
-
-<!--なんでassets/jsだと動かないんだ-->
+<!--なんでassets/jsだと動かないんだ。だれか助けて-->
 <script>
 $('input[name="landing_merit_options"]').change( function(){
     if ($('input[name="landing_merit_options"]:checked').val() == 0) {
