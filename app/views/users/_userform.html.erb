@@ -10,7 +10,9 @@
   <%= f.password_field :password, class: "form-control" %>
   <h3>パスワード確認</h3>
   <%= f.password_field :password_confirmation, class: "form-control" %>
-
+  <br />
+  <p>*プロトタイプ版につき、登録を受け付けておりません。</p>
+  <p>興味のある方は<%= link_to "こちらへご連絡ください", question_new_path%></p>
   <%= f.submit :class =>  "btn btn-primary position-button" %>
 <% end %>
 </div>

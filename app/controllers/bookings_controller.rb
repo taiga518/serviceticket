@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
       GiftMailer.send_gift(@booking).deliver
       redirect_to booking_path(@booking.id)
     else
-      render "new"
+      redirect_to(item_path(@booking.item_id))
       #render plain: @item.errors.inspect
     end
   end
