@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
     @booking.serial = SecureRandom.hex(5)
     if @booking.save
       GiftMailer.send_gift(@booking).deliver
+      GiftMailer.send_receipt(@booking).deliver
       redirect_to booking_path(@booking.id)
     else
       redirect_to(item_path(@booking.item_id))
